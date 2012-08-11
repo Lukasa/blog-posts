@@ -5,7 +5,7 @@ sports. Any readers who aren't interested should wait until next week, when I
 sort-of-promise to write about the Python Requests library.*
 
 <figure>
-    <img src="http://www.london2012.com/mm/Photo/sport/General/01/40/29/87/1402987_MFULL.jpg" alt="Opals celebrating." />
+    <img src="http://www.london2012.com/mm/Photo/sport/General/01/40/29/87/1402987_MFULL.jpg" alt="Opals celebrating." width="600" />
     <figcaption>Australian Opals enjoying their Bronze Medal victory. Image courtesy of <a href="http://www.london2012.com/photos/latestpictures.html#fullscreen-australia-celebrate-bronze-the-women-basketball-1402995">London2012.com.</a></figcaption>
 </figure>
 
