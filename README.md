@@ -1,7 +1,8 @@
 # Echochamber
 
 This repository contains all of my blog posts. While I recommend you read them
-on my blog, you are welcome to read them here if you like.
+[on my blog](http://www.lukasa.co.uk/), you are welcome to read them here if
+you like.
 
 ## License
 
