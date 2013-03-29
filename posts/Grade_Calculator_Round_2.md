@@ -21,9 +21,9 @@ Why don't I regale you with the changelist?
 
 ### Changelist
 
-**New Features**: Absolutely none!
-**Bugs Fixed**: Absolutely none!
-**Performance Changes**: The performance is now worse!
+- **New Features**: Absolutely none!
+- **Bugs Fixed**: Absolutely none!
+- **Performance Changes**: The performance is now worse!
 
 Yes, that's right, I finally bent to the whims of the internet and added JQuery
 to one of my websites. I kept not doing so on the grounds that it's weighty and
