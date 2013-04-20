@@ -49,8 +49,8 @@ unique to a specific _type_ of agent. This means that Internet Explorer should
 send a User-Agent header that is different to all other browsers _and_ to all
 other versions of IE.
 
-"_Perfect!_" cry the web developers. "_Our servers can check for this string,
-and use its value to determine how to render the page!_". And so begins the
+_"Perfect!"_ cry the web developers. _"Our servers can check for this string,
+and use its value to determine how to render the page!"_. And so begins the
 the trouble.
 
 ### The Trouble
@@ -66,7 +66,7 @@ being a version of Firefox.
 The problem is, six months later the guys in Redmond get around to adding
 _Twiddlor_ support to Internet Explorer. But all their users are still
 complaining that none of their favourite websites will let them use _Twiddlor_,
-instead claiming that the website is "_Best used in Mozilla Firefox_" or some
+instead claiming that the website is _"Best used in Mozilla Firefox"_ or some
 such nonsense.
 
 How does Microsoft get you to show them the _Twiddlor_-enabled page? Simple:
@@ -79,7 +79,7 @@ running on my Mac:
 
     Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.47 Safari/537.36
 
-"_What is all that crap?_", I hear you ask, quite rightly. Why does it say it's
+_"What is all that crap?"_, I hear you ask, quite rightly. Why does it say it's
 Mozilla? It's not Mozilla! You're quite right. But enough people have tested
 for Firefox by just checking that the word 'Mozilla' is in the UA string that
 everyone puts it there. And I mean __everyone__. Check out Safari, also on my
@@ -153,7 +153,7 @@ local copy of the standard library to see what we got when I returned the data
 instead of throwing an exception. What I saw was the second unpleasant thing
 this web site had done. The HTML for this page was about 20 lines long. All it
 did was embed, at full size, a
-[frame](http://en.wikipedia.org/wiki/Framing_(World_Wide_Web)) containing
+[frame](http://en.wikipedia.org/wiki/Framing_%28World_Wide_Web%29) containing
 another page, or a warning if your browser doesn't support frames.
 
 This is pretty obnoxious: why not just server the other page? Why require
