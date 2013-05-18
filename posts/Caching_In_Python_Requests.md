@@ -38,7 +38,7 @@ Once you've installed it, you get caching like this:
 
     s = requests.Session()
     s.mount('http://', CachingHTTPAdapter())
-    s.mount('http://', CachingHTTPAdapter())
+    s.mount('https://', CachingHTTPAdapter())
 
 Done.
 
