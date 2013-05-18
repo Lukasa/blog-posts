@@ -147,7 +147,7 @@ right place (one of the XXXX locations above). Keep hold of the value for _d_,
 we'll need it later.
 
 With that step finished, your support document should be done! Make sure you
-server it from the correct URL, with the correct `Content-Type` header set, and
+serve it from the correct URL, with the correct `Content-Type` header set, and
 then you're good to go.
 
 ### The Login Page
