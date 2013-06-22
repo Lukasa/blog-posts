@@ -44,13 +44,14 @@ use that. Whack this in a file and `import` it into whatever you're doing:
     class SSLAdapter(HTTPAdapter):
         '''An HTTPS Transport Adapter that uses an arbitrary SSL version.'''
         def __init__(self, ssl_version=None, **kwargs):
-            super(SSLAdapter, self).__init__(kwargs)
-
             self.ssl_version = ssl_version
 
-        def init_poolmanager(self, connections, maxsize):
+            super(SSLAdapter, self).__init__(**kwargs)
+
+        def init_poolmanager(self, connections, maxsize, block=False):
             self.poolmanager = PoolManager(num_pools=connections,
                                            maxsize=maxsize,
+                                           block=block,
                                            ssl_version=self.ssl_version)
 
 You can mount it to a `Session` object and just go to town.
@@ -58,3 +59,7 @@ You can mount it to a `Session` object and just go to town.
 Hopefully this will be of use to people. If you have any problems or
 improvements, leave a note in the comments or drop me a line on Twitter (the
 url is in the sidebar).
+
+**EDIT**: Fixed broken code in constructor.
+
+**EDIT (22/06/13)**: Brought code up to date with Requests v1.2.3.
