@@ -388,18 +388,21 @@ Your next step is to build up the assertion dictionary. It's easiest for me to
 show you how it looks in code:
 
     {
-        'iss': X,
-        'exp': Y,
+        'iss': W,
+        'exp': X,
+        'iat': Y,
         'public-key': Z,
         'principal': {'email': A}
     }
 
 In the above:
 
-- X is a string representing the issuer. In this case, it should be the domain
+- W is a string representing the issuer. In this case, it should be the domain
   you're signing for. For me, that was `lukasa.co.uk`.
-- Y is a number representing the expiry date in milliseconds past the epoch.
+- X is a number representing the expiry date in milliseconds past the epoch.
   You should already have calculated this.
+- Y is a number representing the issuing date in milliseconds past the epoch.
+  This is pretty easy for you to get.
 - Z is the user's public key. This is a JSON object, and you must not use a
   string here, so make sure you called json.loads() on the POSTed data.
 - A is the email you're signing for. Again, this was passed in.
@@ -455,7 +458,8 @@ added comments for clarity:
             return HttpResponseBadRequest()
 
         # Expiry time must be in ms past the epoch, not seconds past it.
-        expiry_time = int(time.time() + float(query_duration)) * 1000
+        now = time.time()
+        expiry_time = int(now + float(query_duration)) * 1000
 
         # Create the signing key.
         exponent = os.environ['PERSONA_E']
@@ -472,6 +476,7 @@ added comments for clarity:
         # gather this is what it's supposed to look like.
         data = {'iss': 'lukasa.co.uk',
                 'exp': expiry_time,
+                'iat': int(now) * 1000,
                 'public-key': public_key,
                 'principal': {'email': request.user.email}}
 
@@ -498,3 +503,8 @@ I'll point you to the real masters, like
 [Dan Callahan](https://twitter.com/callahad).
 
 Let me know if you have problems or comments on Twitter, or in the comments.
+
+**EDIT** *(10 July 2013)*: As
+[pointed out](https://twitter.com/jchysk/status/354647147347574785) by
+[@jchysk](https://twitter.com/jchysk) on Twitter, it's now required to put the
+`iat` value in the certificate. Updated to do that.
