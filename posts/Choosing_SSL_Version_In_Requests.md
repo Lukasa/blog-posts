@@ -23,9 +23,10 @@ new Transport Adapter will look like this:
     import ssl
 
     class MyAdapter(HTTPAdapter):
-        def init_poolmanager(self, connections, maxsize):
+        def init_poolmanager(self, connections, maxsize, block=False):
             self.poolmanager = PoolManager(num_pools=connections,
                                            maxsize=maxsize,
+                                           block=block,
                                            ssl_version=ssl.PROTOCOL_TLSv1)
 
 With that done, you can mount it to a Requests `Session` object:
@@ -63,3 +64,5 @@ url is in the sidebar).
 **EDIT**: Fixed broken code in constructor.
 
 **EDIT (22/06/13)**: Brought code up to date with Requests v1.2.3.
+
+**EDIT (28/08/13)**: Actually brought code up to date with Requests v1.2.3.
