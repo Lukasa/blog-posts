@@ -1,4 +1,4 @@
-# An Investigation Into Hyper
+## An Investigation Into Hyper
 
 I've been working on hyper for a long time now, and it's finally in a state
 where I can do real comparisons between hyper and httplib. So I did! And just
