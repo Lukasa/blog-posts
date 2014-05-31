@@ -69,3 +69,11 @@ Otherwise, there's really nothing else. If you need anything else in the
 logging library, you probably already understand it.
 
 See? Logging is easy.
+
+**EDIT (31/05/2014):** Note that the `NullHandler` is only available on Python
+2.7 or later. If you want an equivalent for Python 2.6, use this to provide a
+fallback:
+
+    class NullHandler(logging.Handler):
+        def emit(self, record):
+            pass
