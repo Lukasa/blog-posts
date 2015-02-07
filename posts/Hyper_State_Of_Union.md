@@ -1,10 +1,10 @@
 ## Hyper: The State of the Union
 
-It's been a few months since I last spoke about `hyper`. The reason I've been
-so quiet is primarily because not much progress has been made on the project.
-I've been swamped with other projects (most notably
-[Project Calico](http://www.projectcalico.org/)), and that's limited my ability
-to make much forward progress.
+It's been a few months since I last spoke about
+[`hyper`](http://hyper.rtfd.org/). The reason I've been so quiet is primarily
+because not much progress has been made on the project. I've been swamped with
+other projects (most notably [Project Calico](http://www.projectcalico.org/)),
+and that's limited my ability to make much forward progress.
 
 However, in the last few weeks there's been a bit more activity on `hyper`, in
 large part due to the excellent work of
